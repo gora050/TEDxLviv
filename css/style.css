@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Museo Sans 500';
+    src: url(../fonts/MuseoSansCyrl_1.otf);
+   }
+body, html {
+  font-family: 'Museo Sans 500';
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+  min-width: 600px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/89_2.jpg);
+}
+.circles .clearfix{
+  height: 240px;
+  margin-bottom: 50px;
+}
+.circles {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 600px;
+}
+.navbar .navbar-collapse ul{
+  margin: 0 auto;
+}
+.navbar {
+  z-index: 5;
+  width: 100%;
+  background-color: white;
+}
+.promo-text {
+font-family:'Museo Sans 500';
+background-color: #222220;
+color: white;
+display: inline-block;
+width: 100%;
+letter-spacing: 1px;
+font-size: 30px;
+}
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.promo {
+  display: flex;
+  text-align: center;
+  background-color: rgba(255,255,255,0.9);
+  align-items: center;
+}
+
+.rbg-0-2{
+  background: linear-gradient(#E4003A 25%, transparent 25%);
+  left: 120px;
+
+}
+.rbg-45-4{
+  background: linear-gradient(#E4003A 50%, transparent 50%);
+  transform: rotate(-45deg);
+  left: 240px;
+}
+.rgb-45-none {
+  background: linear-gradient(-45deg,
+      transparent 14.9%,
+      #E4003A 14.9%, #E4003A 60%,
+      transparent 60%
+      ),
+    linear-gradient(-45deg,
+      #E4003A 10%,
+      transparent 10%
+      ),     linear-gradient(135deg,
+            #E4003A 35%,
+            transparent 35%
+            ),linear-gradient(90deg,#E4003A 50%, transparent 50%) ;
+}
+.buy-tickets {
+  float: right;
+      border-radius: 0;
+      background-color: #e4003a;
+      border: 0;
+
+}
+.promo-info {
+  float: left;
+  line-height: 40px;
+}
+.promo-bar {
+  font-family: 'Museo Sans 500';
+  font-size: 20px;
+  margin-top: 30px;
+
+}
+.about .col-lg-6 h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.spiker-promo h1 span{
+  background-color: #222220;
+  color: #F1F1F1;
+  font-size: 32px;
+}
+.spiker-promo .container > span, .spiker-promo h1{
+  display: inline-block;
+}
+.spiker-promo .container > span{
+  margin-bottom: 30px;
+}
+.spiker-promo h1{
+  text-align: center;
+  margin: 60px 0;
+  width: 100%;
+}
+.spiker-promo {
+  text-align: center;
+  min-height: 100px;
+  height: auto;
+  background-color: #F1F1F1;
+  color: #222220;
+}
+
+.promo > div {
+  margin: 0 auto;
+}
+.rbg-90-6{
+  background: linear-gradient(90deg,#E4003A 75%, transparent 75%);
+  left: 360px;
+}
+.about {
+  min-height: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+}
+.navbar-brand {
+  padding: 0;
+}
+.map > div, #map{
+  width: 100%;
+  height: 100%;
+}
+.map > div {
+  box-shadow: 3px 3px 8px 0px #8e0729;
+
+}
+.map {
+  padding: 5vmin;
+  background-position: center top;
+  box-sizing: border-box;
+  background-size: 32px 32px;
+
+}
+.rbg-135-7{
+  background: linear-gradient(#E4003A 87.2%, transparent 87.2%);
+  left: 480px;
+    transform: rotate(45deg);
+}
+.rbg-45-7{
+  background: linear-gradient(#E4003A 87.2%, transparent 87.2%);
+  left: 480px;
+    transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.circles .logo-circle img {
+width: 90%;
+margin: 0 auto;
+}
+.circles .logo-circle {
+  background-color: #E4003A;
+  left: 300px;
+  opacity: 0;
+  display: flex;
+  transition:0.3s ease-out;
+}
+.pull-right {
+  float: right;
+}
+.sm-line .circle{
+  margin: 0 auto;
+position: absolute;
+left: 50%;
+margin-top: -120px;
+margin-left: -120px;
+}
+.sm-line > p {
+  padding: 0px 10px;
+  font-size: 2em;
+  background-color: #222220;
+  color: white;
+  position: relative;
+  margin-top: -18px;
+  display: inline-block;
+}
+.sm-line {
+  text-align: center;
+  margin: 30px auto;
+  margin-top: 150px;
+  width: 360px;
+  position: relative;
+}
+.sm-line > div {
+  width: 360px;
+height: 120px;
+left: 0;
+position: relative;
+background-size: 23px;
+border-radius: 60px;
+
+}
+.sm-circle {
+  width: 120px;
+  height: 120px;
+  display: block;
+  background-size: 12px;
+  border-radius: 60px;
+  transition:1s ease-out;
+}
+.circle {
+  width: 240px;
+  height: 240px;
+  margin-left: -120px;
+  display: block;
+  background-size: 12px;
+  border-radius: 120px;
+  position: absolute;
+  transition:1s ease-out;
+}
+.circles:hover .logo-circle{
+ opacity: 1;
+ transition-delay: 0.7s;
+}
+.circles:hover .circle{
+  left:300px;
+}
