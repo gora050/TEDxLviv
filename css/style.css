@@ -80,6 +80,9 @@ section {
             transparent 35%
             ),linear-gradient(90deg,#E4003A 50%, transparent 50%) ;
 }
+.buy-tickets:hover {
+  background-color:#222220;
+}
 .buy-tickets {
   float: right;
       border-radius: 0;
