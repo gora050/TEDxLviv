@@ -57,37 +57,43 @@ section {
 }
 
 .rbg-0-2{
-  background: linear-gradient(#E4003A 25%, transparent 25%);
+  background: linear-gradient(#e62b1e 25%, transparent 25%);
   left: 120px;
 
 }
 .rbg-45-4{
-  background: linear-gradient(#E4003A 50%, transparent 50%);
+  background: linear-gradient(#e62b1e 50%, transparent 50%);
   transform: rotate(-45deg);
   left: 240px;
 }
 .rgb-45-none {
   background: linear-gradient(-45deg,
       transparent 14.9%,
-      #E4003A 14.9%, #E4003A 60%,
+      #e62b1e 14.9%, #e62b1e 60%,
       transparent 60%
       ),
     linear-gradient(-45deg,
-      #E4003A 10%,
+      #e62b1e 10%,
       transparent 10%
       ),     linear-gradient(135deg,
-            #E4003A 35%,
+            #e62b1e 35%,
             transparent 35%
-            ),linear-gradient(90deg,#E4003A 50%, transparent 50%) ;
+            ),linear-gradient(90deg,#e62b1e 50%, white 50%) ;
 }
 .buy-tickets:hover {
   background-color:#222220;
 }
+.buy-tickets.btn-success {
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
 .buy-tickets {
   float: right;
+  cursor: pointer;
+
       border-radius: 0;
-      background-color: #e4003a;
-      border: 0;
+      background-color: #e62b1e;
+      border: 0 !important;
 
 }
 .promo-info {
@@ -100,7 +106,7 @@ section {
   margin-top: 30px;
 
 }
-.about .col-lg-6 h1 {
+.about h1 {
   margin-top: 30px;
   margin-bottom: 20px;
 }
@@ -114,6 +120,87 @@ section {
 }
 .spiker-promo .container > span{
   margin-bottom: 30px;
+}
+.team {
+  height: auto;
+}
+.team  .row {
+  margin: 0;
+  justify-content: center;
+}
+.team  .row > .col-lg-6 {
+  padding: 0;
+  flex: none;
+  max-width: none;
+  float: left;
+  width: auto;
+}
+.team  .row > .col-lg-6 >.col-lg-6 {
+overflow: hidden;
+height: 270px;
+float: left;
+
+max-width: none;
+width: 210px;
+flex: none;
+margin: 0;
+padding: 0;
+}
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  margin-top: 40px;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+}
+.map a:hover {
+  color:black;
+}
+.map a {
+  color: #e62b1e;
+}
+.team  .row > .col-lg-6 >.col-lg-6:hover img{
+  filter: none;
+}
+.team a {
+  color: #ffffff;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: 'Museo Sans 500';
+      text-decoration: none !important;
+      height: 100%;
+      font-size: 20px;
+}
+.team a:hover span {
+  opacity:1;
+}
+.team h1 {
+  text-align: center;
+  margin: 60px 0;
+  font-family: 'Museo Sans 500';
+}
+.team span {
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  background: #e62b1e;
+  padding: 10px 0;
+  left: 0;
+  width: 100%;
+}
+.team img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: grayscale();
+  width: 100%;
+  cursor: pointer;
 }
 .spiker-promo h1{
   text-align: center;
@@ -132,7 +219,7 @@ section {
   margin: 0 auto;
 }
 .rbg-90-6{
-  background: linear-gradient(90deg,#E4003A 75%, transparent 75%);
+  background: linear-gradient(90deg,#e62b1e 75%, transparent 75%);
   left: 360px;
 }
 .about {
@@ -145,36 +232,119 @@ section {
 .navbar-brand {
   padding: 0;
 }
-.map > div, #map{
+.map {
+  height: 650px;
+  background-image: url(../img/arena.jpg);
+background-size: cover;
+}
+#map{
   width: 100%;
   height: 100%;
 }
-#map {
-  height: 290px;
-}
-.map > div .col-lg-6{
+.map  div .col-lg-6{
 margin: 0;
+height: 100%;
+background-color: white;
 padding: 0;
 }
-.map > div {
-  box-shadow: 3px 3px 8px 0px #8e0729;
-  background-color: white;
+.act {
+  width: 200px;
+height: 100px;
+position: relative;
+border-radius: 50px;
+background-size: 12px;
+left: 0;
+text-align: center;
+margin: 30px auto;
+margin-bottom: 16px;
+background-position: 0px 1px;
 }
-section.map {
+.act > div {
+  width: 100px;
+height: 100px;
+border-radius: 50px;
+background-color: #e62b1e;
+float: right;
+background-size: 12px;
+}
+.navbar .navbar-text a {
+  padding: 0px;
+line-height: 40px;
+color: rgba(0,0,0,.5);
+}
+
+.navbar-text.pull-right {
+  padding: 0;
+}
+.facebook {
+  width: 36px;
+  margin-left: 10px;
+  height: 36px;
+  background-size: 36px;
+  background-image: url(../img/facebook.png)
+}
+.map div .col-lg-6 .social a{
+  float: left;
+}
+.map div .col-lg-6 .social{
+  margin: 0 auto;
+  display: inline-block;
+}
+.map div .col-lg-6 .buy-tickets{
+  float: none;
+  display: inline-block;
+
+}
+.map div .col-lg-6 > div{
+  margin: 0 auto;
+}
+.map div .col-lg-6{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.map .col-lg-6 h2 {
+  /*text-align: center;*/
+  width: 100%;
+  font-size: 25px;
+  margin-top:0; /*56px;*/
+  margin-bottom: 10px;
+}
+.map > div {
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.61);
   padding: 30px;
-  height: 350px !important;
+  height: 550px !important;
   background-position: center top;
   box-sizing: border-box;
   background-size: 32px 32px;
-
+}
+.act > p {
+  padding: 0px 10px;
+      font-size: 2em;
+      background-color: #222220;
+      color: white;
+      position: absolute;
+      bottom: -16px;
+      text-align: center;
+      zoom: 0.9;
+      display: inline-block;
+      left: 50%;
+      margin: 0;
+      margin-left: -43px;
+}
+section.map .row{
+  margin: 0;
+  height: 100%;
+  border-radius: 3px;
+  overflow: hidden;
 }
 .rbg-135-7{
-  background: linear-gradient(#E4003A 87.2%, transparent 87.2%);
+  background: linear-gradient(#e62b1e 87.2%, transparent 87.2%);
   left: 480px;
     transform: rotate(45deg);
 }
 .rbg-45-7{
-  background: linear-gradient(#E4003A 87.2%, transparent 87.2%);
+  background: linear-gradient(#e62b1e 87.2%, transparent 87.2%);
   left: 480px;
     transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -184,7 +354,7 @@ width: 90%;
 margin: 0 auto;
 }
 .circles .logo-circle {
-  background-color: #E4003A;
+  background-color: #e62b1e;
   left: 300px;
   opacity: 0;
   display: flex;
@@ -211,8 +381,9 @@ margin-left: -120px;
 }
 .sm-line {
   text-align: center;
-  margin: 30px auto;
-  margin-top: 150px;
+  margin: 0 auto;
+  padding-top: 135px;
+  top:15px;
   width: 360px;
   position: relative;
 }
