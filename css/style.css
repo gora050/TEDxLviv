@@ -23,14 +23,12 @@ section.speakers {
   height: auto;
   display: block;
 }
-.speaker img {
+.speaker_photo img {
   width: 100%;
       height: 100%;
       display: block;
   }
-.speaker:nth-child(odd) .speaker_photo{
-  float: left;
-}
+
 .speakers h2{
   text-align: center;
   margin: 50px 0;
@@ -40,11 +38,25 @@ section.speakers {
 .speaker {
   width: 100%;
   min-height: 200px;
-  margin: 40px 0;
+  margin-top: 30px;
+  margin: 0px auto;
   min-width: 200px;
 }
-.speaker .speaker_photo {
-  float: right;
+.slider-nav .slick-slide  {
+    padding: 0px 10px;
+}
+.slider-nav .slick-slide:hover {
+  opacity: 0.8;
+}
+.slider-nav .slick-slide {
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.slider-nav .slick-current {
+  opacity: 1 !important;
+}
+.speaker_photo {
   width: 200px;
   padding: 10px;
   background: linear-gradient(45deg, #e62b1e 25%, transparent 25%),
@@ -53,7 +65,8 @@ section.speakers {
   background-size: 32px;
   background-position: -4px;
   height: 200px;
-  border-radius: 100px
+  border-radius: 100px;
+  margin:0 auto;
 }
 .circles {
   margin: 0 auto;
@@ -209,6 +222,51 @@ footer {
       text-decoration: none !important;
       height: 100%;
       font-size: 20px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #e62b1e;
+}
+
+.slider-for .slick-slide h2 {
+  text-align: left;
+  font-size: 35px;
+}
+.slider-nav .slick-slide.slick-current h1 {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  width: 20px;
+  height: 20px;
+  color: #e62b1e !important;
+  font-size: 11px;
+}
+.slick-dots {
+  bottom: -55px;
+}
+.speakers {
+  padding: 60px 0;
+  overflow: hidden;
+}
+.slider-for .slick-list {
+  overflow: visible;
+}
+.slider-for .slick-slide h1 span{
+  padding: 10px 20px;
+background-color: black;
+color: white;
+font-size: 25px;
+margin-top: -30px;
+display: inline-block;
+position: relative;
+top: -30px
+}
+.slider-for .slick-slide h1 {
+  text-align: center;
+  transition: 0.5s;
+  display: block;
+  z-index: 5;
+  position: relative;
 }
 .team a:hover span {
   opacity:1;
