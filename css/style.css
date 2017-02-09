@@ -212,6 +212,8 @@ footer {
 }
 .team a:hover span {
   opacity:1;
+}
+.team a span {
   font-size: 18px;
 }
 .team h1 {
