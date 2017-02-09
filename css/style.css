@@ -19,6 +19,42 @@ body, html {
   height: 240px;
   margin-bottom: 50px;
 }
+section.speakers {
+  height: auto;
+  display: block;
+}
+.speaker img {
+  width: 100%;
+      height: 100%;
+      display: block;
+  }
+.speaker:nth-child(odd) .speaker_photo{
+  float: left;
+}
+.speakers h2{
+  text-align: center;
+  margin: 50px 0;
+  font-size: 100px;
+  font-style: italic;
+}
+.speaker {
+  width: 100%;
+  min-height: 200px;
+  margin: 40px 0;
+  min-width: 200px;
+}
+.speaker .speaker_photo {
+  float: right;
+  width: 200px;
+  padding: 10px;
+  background: linear-gradient(45deg, #e62b1e 25%, transparent 25%),
+              linear-gradient(225deg, white 25%, transparent 25%),
+              linear-gradient(225deg, #e62b1e 50%, white 50%);
+  background-size: 32px;
+  background-position: -4px;
+  height: 200px;
+  border-radius: 100px
+}
 .circles {
   margin: 0 auto;
   overflow: hidden;
@@ -176,6 +212,7 @@ footer {
 }
 .team a:hover span {
   opacity:1;
+  font-size: 18px;
 }
 .team h1 {
   text-align: center;
