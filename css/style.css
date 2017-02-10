@@ -59,10 +59,9 @@ section.speakers {
 .speaker_photo {
   width: 200px;
   padding: 10px;
-  background: linear-gradient(45deg, #e62b1e 25%, transparent 25%),
-              linear-gradient(225deg, white 25%, transparent 25%),
-              linear-gradient(225deg, #e62b1e 50%, white 50%);
-  background-size: 32px;
+  background: linear-gradient(-135deg, #e62b1e 15%, transparent 15%),
+              linear-gradient(45deg, #e62b1e 15%, transparent 15%, transparent 35%, #e62b1e 35%, #e62b1e 65%, transparent 65%);
+  background-size: 26px;
   background-position: -4px;
   height: 200px;
   border-radius: 100px;
