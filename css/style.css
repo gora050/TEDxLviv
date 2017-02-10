@@ -56,6 +56,88 @@ section.speakers {
 .slider-nav .slick-current {
   opacity: 1 !important;
 }
+.tickets {
+  height: auto;
+  padding-bottom: 50px;
+}
+.ticket a{
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+@media (max-width:991px) {
+  .navbar-text {
+    float: left !important;
+  }
+  .tickets .col-md-3 {
+      width: 50%;
+      margin-bottom: 30px;
+      flex: none;
+      max-width: initial;
+  }
+}
+.ticket .buy-tickets:hover{
+background-color: #e62b1e;
+}
+.ticket .buy-tickets{
+float: none;
+margin-top: 10px;
+background-color: #222220;
+}
+.ticket {
+  text-align: center;
+    height: 300px;
+    //box-shadow: 2px 2px 6px 0px #ababab;
+    box-sizing: border-box;
+border: 1px solid #292b2c;
+    width: 100%;
+    padding-top: 30px;
+}
+.ticket span {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    font-style: italic;
+    margin-top: 20px;
+
+    padding: 0 10px;
+    font-size: 14px;
+    color: #4a4545;
+}
+.ticket-info {
+      padding: 20px 0;
+  border-bottom: 1px solid #ece9e9;
+  border-top: 1px solid #ece9e9;
+}
+.ticket div {
+
+}
+.ticket h2 {
+    color: #e62b1e;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+.ticket h1 {
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+@media (max-width: 616px) {
+.row {
+  margin: 0
+}
+.container{
+  padding: 0;
+}
+.container {
+    width: 100%;
+  }
+}
 .speaker_photo {
   width: 200px;
   padding: 10px;
