@@ -66,6 +66,9 @@ section.speakers {
   display: inline-block;
 
 }
+.navbar-light .navbar-toggler {
+    z-index: 555;
+}
 @media (max-width:991px) {
   .navbar-text {
     float: left !important;
