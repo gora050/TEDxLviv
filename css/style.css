@@ -66,6 +66,17 @@ section.speakers {
   display: inline-block;
 
 }
+.soldout {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+width: 100%;
+background-color: rgba(255,255,255,0.6);
+height: 100%;
+text-align: center;
+align-items: center;
+}
 .navbar-light .navbar-toggler {
     z-index: 555;
 }
@@ -90,6 +101,7 @@ background-color: #222220;
 }
 .ticket {
   text-align: center;
+  position: relative;
     height: 300px;
     //box-shadow: 2px 2px 6px 0px #ababab;
     box-sizing: border-box;
@@ -97,7 +109,16 @@ border: 1px solid #292b2c;
     width: 100%;
     padding-top: 30px;
 }
-.ticket span {
+.soldout > span {
+  text-align: center;
+width: 100%;
+transform: rotate(45deg);
+font-size: 47px;
+font-weight: bold;
+color: black;
+
+}
+.ticket .ticket-info-text{
     text-align: center;
     width: 100%;
     display: inline-block;
