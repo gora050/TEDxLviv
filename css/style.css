@@ -2,6 +2,10 @@
     font-family: 'Museo Sans 500';
     src: url(../fonts/MuseoSansCyrl_1.otf);
    }
+@font-face {
+    font-family: 'Museo Sans bold';
+    src: url(../fonts/museo_cyrillic_500.ttf);
+   }
 body, html {
   font-family: 'Museo Sans 500';
   margin: 0;
@@ -14,6 +18,68 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/89_2.jpg);
+}
+.partners .official img{
+  max-width: 480px;
+}
+.partners .member > .mediap img {
+  max-height: 80px;
+margin: 0 30px;
+}
+.partners .design.col-md-3{
+  margin: 30px 0;
+}
+.partners > div > .row {
+      justify-content: center;
+}
+.partners .member.top > div{
+  height: 260px;
+  display: block;
+}
+.partners .member.top img{
+    display: block;
+    margin: 0 auto;
+}
+.partners .member h2,
+.partners .design h2{
+  font-size: 26px;
+}
+.partners .design img{
+  max-width: 150px;
+}
+.partners .member > div, .partners .design > div, .partners .official > div {
+height: 175px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.partners .design > div {
+  height: 150px;
+}
+.partners .official > div{
+    height: 260px;
+}
+.design-outer {
+  height: 200px;
+}
+
+@media (max-width:775px) {
+  .partners .member > .mediap img{
+    margin: 30px;
+  }
+  .partners .member > .mediap {
+    display: block;
+    height: auto;
+  }
+}
+.partners .member img{
+  max-height: 125px;
+}
+.partners {
+  padding-top:100px;
+  height: auto;
+  min-height: 100%;
+  text-align: center;
 }
 .circles .clearfix{
   height: 240px;
