@@ -22,10 +22,7 @@ body, html {
 .partners .official img{
   max-width: 480px;
 }
-.partners .member > .mediap img {
-  max-height: 80px;
-margin: 0 30px;
-}
+
 .partners .design.col-md-3{
   margin: 30px 0;
 }
@@ -33,19 +30,17 @@ margin: 0 30px;
       justify-content: center;
 }
 .partners .member.top > div{
-  height: 260px;
+  height: auto;
   display: block;
 }
-.partners .member.top img{
-    display: block;
-    margin: 0 auto;
-}
+
 .partners .member h2,
 .partners .design h2{
   font-size: 26px;
 }
 .partners .design img{
   max-width: 150px;
+  margin: 20px 10px;
 }
 .partners .member > div, .partners .design > div, .partners .official > div {
 height: 175px;
@@ -54,18 +49,49 @@ align-items: center;
 justify-content: center;
 }
 .partners .design > div {
-  height: 150px;
+  display: block;
+  height: auto;
 }
+
 .partners .official > div{
-    height: 260px;
 }
 .design-outer {
   height: 200px;
 }
+.partners .member > .mediap {
+  display: block;
+  min-height: 170px;
 
+  height: auto;
+}
+.partners .member > .mediap .mediasq img{
+max-height: 150px;
+}
+.partners .official h1 {
+  font-size: 40px;
+  margin-top: 0;
+}
+.partners h1 {
+  font-weight: bold;
+  margin: 30px;
+  font-family: 'Museo Sans 500';
+  background-color: #222220;
+  color: white;
+  display: inline-block;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  font-size: 35px;
+  padding: 10px 30px;
+}
+.partners .member > .mediap img {
+max-height: 80px;
+max-width: 28%;
+margin: 20px 30px;
+}
 @media (max-width:775px) {
   .partners .member > .mediap img{
     margin: 30px;
+    max-width: 100%;
   }
   .partners .member > .mediap {
     display: block;
@@ -233,7 +259,7 @@ color: black;
   padding: 10px;
   background: linear-gradient(-135deg, #e62b1e 15%, transparent 15%),
               linear-gradient(45deg, #e62b1e 15%, transparent 15%, transparent 35%, #e62b1e 35%, #e62b1e 65%, transparent 65%);
-  background-size: 26px;
+  background-size: 26px 26px;
   background-position: -4px;
   height: 200px;
   border-radius: 100px;
@@ -383,6 +409,7 @@ footer {
 }
 .team  .row > .col-lg-6 >.col-lg-6:hover img{
   filter: none;
+  -moz-filter: none;
 }
 .team a {
   color: #ffffff;
@@ -466,7 +493,7 @@ top: -30px
   position: absolute;
   top: 0;
   left: 0;
-  filter: grayscale();
+  filter: grayscale(100%);
   width: 100%;
   cursor: pointer;
 }
@@ -520,7 +547,7 @@ padding: 0;
 height: 100px;
 position: relative;
 border-radius: 50px;
-background-size: 12px;
+background-size: 12px 12px;
 left: 0;
 text-align: center;
 margin: 30px auto;
@@ -533,7 +560,7 @@ height: 100px;
 border-radius: 50px;
 background-color: #e62b1e;
 float: right;
-background-size: 12px;
+background-size: 12px 12px;
 }
 .navbar .navbar-text a {
   padding: 0px;
@@ -548,7 +575,7 @@ color: rgba(0,0,0,.5);
   width: 36px;
   margin-left: 10px;
   height: 36px;
-  background-size: 36px;
+  background-size: 36px 36px;
   background-image: url(../img/facebook.png)
 }
 .map div .col-lg-6 .social a{
@@ -660,7 +687,7 @@ margin-left: -120px;
 height: 120px;
 left: 0;
 position: relative;
-background-size: 23px;
+background-size: 23px 23px;
 border-radius: 60px;
 
 }
@@ -668,7 +695,7 @@ border-radius: 60px;
   width: 120px;
   height: 120px;
   display: block;
-  background-size: 12px;
+  background-size: 12px 12px;
   border-radius: 60px;
   transition:1s ease-out;
 }
@@ -677,7 +704,7 @@ border-radius: 60px;
   height: 240px;
   margin-left: -120px;
   display: block;
-  background-size: 12px;
+  background-size: 12px 12px;
   border-radius: 120px;
   position: absolute;
   transition:1s ease-out;
