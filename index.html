@@ -226,6 +226,12 @@ padding: 0;
       height: 100%;
       font-size: 20px;
 }
+.anchor {
+        position: relative;
+    top: calc(-5vmin - 70px);
+    padding-top: calc(5vmin + 70px);
+    margin-bottom: calc(-5vmin - 70px);
+}
 .team a:hover span {
   opacity:1;
 }
@@ -276,6 +282,14 @@ footer {
 }
 .bg-lightgray {
     background-color: #f9f9f9;
+}
+@media (max-width: 440px) {
+    .team  .row > .col-lg-6  {
+    }
+    .team  .row > .col-lg-6 >.col-lg-6 {
+        height: 216px;
+        width:168px;
+    }
 }
 
     </style>
@@ -383,8 +397,8 @@ footer {
         </div></div>
 
 </section>
-<section class=" speakers" id="speakers">
-    <h1>Спікери</h1>
+<section class=" speakers">
+    <h1   ><div class="anchor" id="speakers"></div>Спікери</h1>
     <div class="container-fluid">
         <div class="row">
             <div class="col active"><img src="img/speakers/1.jpeg">
@@ -413,9 +427,9 @@ footer {
     <h2>Спікери будуть оголошуватись поступово, слідкуйте за новинами!</h2>
 
 </section>
-<section class="partners bg-white" id="partners">
+<section class="partners bg-white" >
     <div class="container">
-        <h1>Партнери</h1>
+        <h1 class="anchor" id="partners">Партнери</h1>
         <div class="row">
             <div class="col-6 col-md-3"><a href="https://eleks.com/"> <img src="img/partners/eleks.png"></a></div>
             <div class="col-6 col-md-3"><a href="https://greenforest.com.ua/"> <img src="img/partners/Logo-Green-Forest.png"></a></div>
