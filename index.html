@@ -76,13 +76,18 @@
     background-position: center;
     background-attachment: fixed;
 }
+.speakers .row > div.col.active {
+    cursor: pointer;
+}
 .speakers .row >div.col {
-    min-height: 200px;
+    min-height: 80px;
     max-height: 60vh;
     justify-content: center;
     display: flex;
-    cursor: pointer;
-
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;    
     align-items: center;
     overflow: hidden;
     color: white;
@@ -112,15 +117,15 @@ a.tickets-h:hover {
     background: #e63c1f;
     box-shadow: 0 0 8px 0 #901b07;
     color: white !important;
-}x
-.speakers .row >div.col p{
-font-size: 3em;
 }
-
+.speakers .row >div.col p{
+    margin-bottom: 0;
+}
+/*
 .speakers .row >div.col:hover p{
     display: none;
 }
-.speakers .row >div.col:hover span, .speakers .row >div.col:hover img{
+.speakers .row >div.col:hover span,*/ .speakers .row >div.col:hover img{
     filter: none;
     font-size: 14rem;
 }
@@ -290,6 +295,11 @@ footer {
         height: 216px;
         width:168px;
     }
+}
+@media (max-width: 991px) {
+    .navbar {
+      background: #010610;
+}
 }
 
     </style>
