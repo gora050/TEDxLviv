@@ -1,0 +1,62 @@
+body,
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'HelveticaNeueCyr';
+
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    background-image: url(img/bg1.png);
+    background-size: cover;
+    background-position:center 100px ;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    font-family: 'HelveticaNeueCyr';
+
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar {
+    height: 100px;
+}
+
+.header__content h2 {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 2em;
+    color: white;
+    margin: 0;
+    line-height: 1;
+
+}
+
+.header__content h1 {
+    color: white;
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:576px) {
+    .header__content {
+        font-size: 12px;
+    }
+}

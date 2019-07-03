@@ -1,0 +1,424 @@
+    <link rel='import' href='bower_components/polymer/polymer.html'/>
+    <link rel='import' href='bower_components/paper-toolbar/paper-toolbar.html'/>
+    <link rel='import' href='bower_components/paper-button/paper-button.html'/>
+    <link rel='import' href='bower_components/paper-fab/paper-fab.html'/>
+    <link rel='import' href='bower_components/paper-listbox/paper-listbox.html'/>
+    <link rel='import' href='bower_components/paper-item/paper-item.html'/>
+    <link rel='import' href='bower_components/paper-checkbox/paper-checkbox.html'/>
+    <link rel='import' href='bower_components/paper-icon-button/paper-icon-button.html'/>
+    <link rel='import' href='bower_components/paper-input/paper-input.html'/>
+    <link rel='import' href='bower_components/paper-dialog/paper-dialog.html'/>
+    <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+
+    <link rel="import" href="chedule-item.html">
+    <dom-module id='tasks-list'>
+      <template>
+        <style media="screen">
+
+          paper-toolbar {
+            --paper-toolbar-background:white;
+            --paper-toolbar-color:black;
+            font-size: 25px;
+            font-family: Roboto;
+            --paper-toolbar: {
+              box-shadow:none;
+            }
+            white-space: nowrap;
+          --paper-toolbar-height: 64px !important;
+            text-transform: none;
+          }
+
+          paper-item {
+            outline: none !important;
+
+          }
+          paper-card {
+             margin:0 5%;
+             margin-top:20px;
+             width: 90%;
+           }
+           .speaker-circle img{
+             width: 100%;
+   height: 100%;
+   display: block;
+           }
+           .card-content {
+             padding: 15px;
+             min-height: 70px;
+             position: relative;
+             padding-left: 100px;
+             box-sizing: border-box;
+           }
+           .speaker-circle {
+             width: 200px;
+             box-sizing: border-box;
+             border-radius: 100px;
+             height: 200px;
+     padding: 10px;
+     background: linear-gradient(-135deg, #e62b1e 15%, transparent 15%), linear-gradient(45deg, #e62b1e 15%, transparent 15%, transparent 35%, #e62b1e 35%, #e62b1e 65%, transparent 65%);
+     background-size: 26px 26px;
+     background-position: -4px;
+   margin:0 auto;
+   margin-top:35px;
+       font-size: 20px;
+           }          .speaker.music{
+             background-color: #FF5722;
+
+           }          .speaker.meal {
+           background-color: #8BC34A;
+           color:black;
+           }          .speaker {
+                      background-color:#3F51B5;
+                      cursor:default;
+                      color:white;
+                     } .speaker .name{
+       font-size: 12px;
+       margin-top: 0;
+     }
+     .speaker .title{
+       text-transform: initial;
+   font-size: 17px;
+   margin: 0;
+     }
+     .speaker .text{
+     float: left;
+     }
+     .speaker .time {
+       display: block;
+       width: 100px;
+       min-height: 30px;
+       position: absolute;
+       top: 0;
+       margin-left: -100px;
+       float: left;
+       height: 100%;
+       display: flex;
+       align-items: center;
+     }
+     .speaker .time span{
+       width: 100%;
+       display: block;
+       font-size: 20px;
+       text-align: center;
+     }
+          .schedule {
+            z-index: 0;
+            padding-bottom: 60px;
+          }
+          .paper-item-link {
+            outline: none !important;
+            text-transform: none;
+            text-decoration: none !important;
+            color: black;
+          }
+          shedule-item {
+              height: 100%;
+          }
+          chedule-item:first-child paper-card{
+            margin-top: 30px;
+          }
+          @media (max-width: 600px) {
+          paper-toolbar.tasks-list {
+              height: 64px;
+          }
+
+}
+        </style>
+        <paper-drawer-panel>
+      <paper-header-panel drawer>
+        <paper-toolbar>
+          <div>Посилання</div>
+        </paper-toolbar>
+        <div>
+
+          <paper-listbox>
+            <a class="paper-item-link" href="http://tedxlviv.com.ua" tabindex="-1">
+              <paper-item>Головна</paper-item>
+            </a>
+            <a class="paper-item-link" href="http://tedxlviv.com.ua/partners.html" tabindex="-1">
+              <paper-item>Партнери</paper-item>
+            </a>
+
+            <a class="paper-item-link" href="http://tedxlviv.com.ua" tabindex="-1">
+              <paper-item>TEDxLviv</paper-item>
+            </a>
+            <a class="paper-item-link" href="https://www.facebook.com/TEDxLviv/" tabindex="-1">
+              <paper-item>Facebook</paper-item>
+            </a>
+</paper-listbox>
+
+         </div>
+      </paper-header-panel>
+      <paper-header-panel main>
+        <paper-toolbar>
+          <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+          <div> <img src="img/redlogo.svg" style="    margin-top: 4px;" width="130px" alt="" /> </div>
+          <div class="" style="margin-left:20px;">
+
+          </div>
+
+        </paper-toolbar>
+        <div class="schedule" style="position:relative">
+          <paper-card  class="speaker "alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="">
+
+              <div class="time"><span>10:15</span></div>
+              </div>
+              <p class="name">TED-відео</p>
+              <p class="title">«Показ TED-відео»</p>
+
+
+            </div>
+          </paper-card>
+          <chedule-item dataid="9"
+                        name="Ярослав Притула"
+                        theme="Архітектура освітніх можливостей"
+                        photo="img/speakers/prytula.png"
+                        time="-">
+                        Питання освіти в сучасній Україні стоїть дуже гостро і ця тема обов'язково мала бути на майбутній конференції. <br>
+                        Ярослав Притула - декан факультету прикладних наук Українського католицького університету.<br>
+                        Він розповість про освітні процеси і про складний вибір освітнього шляху в житті студента.
+
+          </chedule-item>
+          <chedule-item dataid="3"
+                        name="Андрій Демчук"
+                        theme="Досягти неможливого"
+                        photo="img/speakers/demchuk.png"
+                        time="-">
+                        Молодий львівський науковець та досвідчений фехтувальник.<br> У 2016 році паралімпійський чемпіон-шабліст привіз «золото» з Ріо-де-Жанейро, а свою перемогу присвятив українським воїнам, що загинули в АТО.<br>
+                    Про свою історію успіху, а також про перемоги всупереч обставинам Андрій розповість на TEDxLviv.
+          </chedule-item>
+ <chedule-item dataid="1"
+	                         name="Назар Шимоне-Давида"
+				                         theme="Нова еко-система для електромобіля"
+							                         photo="img/speakers/shymone-davyda.png"
+										                         time="-">Співзасновник Tesla Club Ukraine
+													             Cпівзасновник українсько-норвезької компанії Вільний простір майбутнього Carpoint To-U.<br>
+														                 "По нашим підрахункам в Україні вже 3-4 тис електромобілів. Тобто 3-4 тис людей зробили свідомий вибір і пересіли на електромобілі. Один електромобіль в середньому не спалює 2 т пального за рік, тобто 6-8 тис тон пального не спалено, як ви думаєте це багато чи мало?
+																           </chedule-item>
+																	   
+
+	  <chedule-item dataid="7"
+                        name="Алім Алієв"
+                        theme="Від мрії до arzu"
+                        photo="img/speakers/alim.png"
+                        time="-">
+                        Громадський активіст і менеджер освітньо-культурних проектів.<br>
+                     Після окупації Криму разом із друзями Алім заснував громадську організацію «КримSOS», а пізніше — кримськотатарський культурний центр «Кримський дім у Львові».<br>
+                     Алім розповість про Крим, волонтерство і про свою велику мрію
+
+          </chedule-item>
+
+          <paper-card  class="speaker meal"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="-">
+
+              <div class="time"><span>11:40</span></div>
+              </div>
+              <p class="name">Перерва</p>
+              <p class="title">Кава-перерва</p>
+
+
+            </div>
+          </paper-card>
+          <paper-card  class="speaker"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="">
+
+              <div class="time"><span>12:10</span></div>
+              </div>
+              <p class="name">TED-відео</p>
+              <p class="title">«Показ TED-відео»</p>
+
+
+            </div>
+          </paper-card>
+          <chedule-item dataid="4"
+                        name="Марк Зархін"
+                        theme="Креативне місто. Львів?"
+                        photo="img/speakers/zarhin.png"
+                        time="-">
+                        Голова Ради директорів ресторанної групи Fast Food Systems, директор ресторанної групи Kumpel group. <br>
+                    Марк поділиться своїм баченням на те, як зосередити зусилля громади і влади міста на розвитку і концентрації креативного класу у Львові, місті, яке має амбіції мати не тільки національні, але й глобальні впливи.
+
+          </chedule-item>
+          <chedule-item dataid="12"
+                        name="Юрій Бугай"
+                        theme="Реформи як стартап"
+                        photo="img/speakers/bugay.png"
+                        time="-">
+                        Координатор проекту eHealth, Transparency International Ukraine, який ставить за мету запровадити електронну охорону здоров’я в Україні. Один із координаторів реформи публічних закупівель ProZorro.<br />
+                        Юрій переконаний: для втілення реформ в Україні можна застосовувати логіку стартапу, яка дозволяє рухатися до візії із гнучкістю до зовнішніх обставин.<br />
+                        Чому для реформування не потрібні закони? Що спільного між реформами і джазом? Дізнаєтеся з його виступу «Реформи як стартап».
+          </chedule-item>
+          <chedule-item dataid="12"
+                        name="Наталія Моголівець"
+                        theme="Йога - мистецтво життя."
+                        photo="img/speakers/joga.png"
+                        time="-">
+                        Наталія є інструктором із йоги із 13-річним досвідом і очолює львівське відділення «Української Федерації Йоги».<br />
+  На конференції ми разом спробуємо прислухатися до життя й побачити те, чого часто не помічаємо.
+          </chedule-item>
+          <paper-card  class="speaker meal"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="-">
+
+              <div class="time"><span>13:25<br><span style="font-size:10px;line-height:10px;">до</span>14:55</span></div>
+              </div>
+              <p class="name">Обід</p>
+              <p class="title">Перерва на обід</p>
+
+
+            </div>
+          </paper-card>
+          <paper-card  class="speaker"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="">
+
+              <div class="time"><span>15:00</span></div>
+              </div>
+              <p class="name">TED-відео</p>
+              <p class="title">«Показ TED-відео»</p>
+
+
+            </div>
+          </paper-card>
+
+          <chedule-item dataid="5"
+                        name="Микола Береза"
+                        theme="Театр. Територія на межі"
+                        photo="img/speakers/bereza.png"
+                        time="-">
+                        Директор та актор Львівського театру ім. Леся Курбаса, кіноактор, учасник гурту «Курбаси»<br>
+                        Закінчив ЛНУ імені Івана Франка, факультет культури і мистецтв, акторський курс у 2005 році, а згодом режисерський курс Володимира Кучинського. Мав стати священиком, прислуговував у церкві. Одночасно працював диджеєм <br>
+                        Мабуть найемоційніший виступ, якого ми всі чекаємо.
+
+          </chedule-item>
+          <chedule-item dataid="11"
+                        name="Фионг Ань Чан"
+                        theme="Апельсинова теорема"
+                        photo="img/speakers/fiong.png"
+                        time="-">
+                        У 17 років надзвичайна українка розв'язала складну математичну задачу і стала переможницею конкурсу молодих учених Intel ISEF у категорії «Математика».<br>
+                    Наймолодша доповідачка конференції TEDxLviv "Думай глобально, дій локально" розповість про фігурні числа і про те, як припинити гризти граніт науки та насолоджуватись апельсиновою математикою.
+
+          </chedule-item>
+          <chedule-item dataid="10"
+                        name="Олександр Конотопський"
+                        theme="На шляху до глобальних баталій"
+                        photo="img/speakers/konotopskiy.png"
+                        time="-">
+                        Всупереч тенденції просто перепродавати комплектуючі з Китаю Олександр вирішив розвивати виробництво в Україні. <br>
+                    «Як відрізняються п’ятсот доларів з Австралії за власний продукт та мільйон доларів виручених із перепродажу?»<br>
+                    Відповідь на це запитання Олександр, засновник «AJAX Systems», знає з власного досвіду.
+
+          </chedule-item>
+
+          <chedule-item dataid="2"
+                        name="Олексій Малицький"
+                        theme="Локальний vs Провінційний"
+                        photo="img/speakers/malytskiy.png"
+                        time="-">
+                        Один із найцікавіших молодих підприємців в Україні. Хлопець є співзасновником Sammy Icon, Morza, Clan-P, One Factory, 5000 Miles та консультантом багатьох компаній із питань брендингу. Автор лекцій «Як почати бізнес в четвер».<br>
+                      Олексій є постійним гостем різноманітних форумів і конференцій, тому цілком ймовірно, що ви вже бачили записи його лекцій. Але, будьте певні, що наживо його виступи «заряджають» набагато більше.<br>
+
+
+          </chedule-item>
+
+          <paper-card  class="speaker meal"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="-">
+
+              <div class="time"><span>16:20 <br><span style="font-size:10px;line-height:10px;">до</span>16:50</span></div>
+              </div>
+              <p class="name">Перерва</p>
+              <p class="title">Кава-перерва</p>
+
+
+            </div>
+          </paper-card>
+          <paper-card  class="speaker"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="">
+
+              <div class="time"><span>17:00</span></div>
+              </div>
+              <p class="name">TED-відео</p>
+              <p class="title">«Показ TED-відео»</p>
+
+
+            </div>
+          </paper-card>
+
+          <chedule-item dataid="8"
+                        name="Дмитро Корнелюк"
+                        theme="Гумор, як соціальний клей"
+                        photo="img/speakers/kornelyuk.png"
+                        time="-">
+                        Стендап-комік, резидент Lviv City Stand Up<br>
+                       Без гумору — будь-яка комунікація між людьми автоматично стає не дуже цікавою та рутинною. Навряд чи є сфера у житті людини, де здорове почуття гумору це зайва опція. ПОЧУТТЯ ГУМОРУ — це м’яз, котрий можна і треба тренувати<br>
+                       Дмитро Корнелюк займається гумором понад 10 років і саме під час його виступу ви зможете прокачати себе в гуморі.
+
+          </chedule-item>
+          <chedule-item dataid="6"
+                        name="Ірина Миронова"
+                        theme="Як я докотилася до Zero Waste Lviv"
+                        photo="img/speakers/myronova.png"
+                        time="-">
+                        Громадський активіст, ініціатор руху Zero Waste Lviv<br>
+                        Ідеї, які вона вкадає у свою розповідь не просто надихають і варті поширення, а є, на нашу думку, обов'язковими до втілення у життя.  <br>
+                        За освітою еколог, закінчила Могилянку, навчалась також в США на програмі з екополітики. Працює в сфері корпоративної соціальної відповідальності, екоменеджменту та сталого розвитку.
+
+          </chedule-item>
+
+          <paper-card  class="speaker music"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="">
+
+              <div class="time"><span>17:55 <br><span style='font-size:10px;line-height:10px;'>до</span>18:30</span></div>
+              </div>
+              <p class="name">Один в каное</p>
+              <p class="title">«Уяви собі...»</p>
+
+
+            </div>
+          </paper-card>
+
+          <paper-card  class="speaker"alt="Donuts" on-tap="info_open">
+            <div class="card-content" >
+              <div class="">
+
+              <div class="time"><span>18:00</span></div>
+              </div>
+              <p class="name">Організатори TEDxLviv</p>
+              <p class="title">«Завершення події»</p>
+
+
+            </div>
+          </paper-card>
+
+
+
+
+
+        </div>
+      </paper-header-panel>
+    </paper-drawer-panel>
+</template>
+<script>
+  Polymer({
+    is: 'tasks-list',
+    // more code goes here
+    ready: function() {
+      this.tasks = [];
+      this.latestTaskName = "";
+    }
+});
+</script>
+    </dom-module>
