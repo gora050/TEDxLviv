@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'speaker',
     'event',
     'schedule',
+    'tedx',
 ]
 
 MIDDLEWARE = [
@@ -120,4 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+import os
+PROJECT_DIR= os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
+
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_DIR,'static/')
+
+MEDIA_ROOT = os.path.join(PROJECT_DIR,'media/')
+MEDIA_URL = '/media/'

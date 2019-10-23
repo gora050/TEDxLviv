@@ -1,0 +1,86 @@
+.speaker-preview {
+    background-size:cover;
+    background-position:top center;
+    background-color:white !important;
+    cursor:pointer;
+    height:200px;
+}
+
+body,html, .mdl-layout {
+min-width:320px;
+}
+.mdl-demo .mdl-layout__content section.header_video {
+    background-color: #010001;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.facebook-frame {
+height:500px; width:320px
+}
+.container {
+width:100%;
+max-width:1200px;
+justify-content:center;
+padding:0;
+
+margin: 0 auto;
+}
+.about-container {
+max-width:800px;
+}
+.header_video video{
+  max-height: 460px;
+  max-width:100%;
+    position: relative;
+
+    }
+
+    section.section--center.mdl-grid.mdl-grid--no-spacing.mdl-shadow--2dp {
+    display: flex;
+    align-items: center;
+}
+
+.header_video .img {
+position:relative;
+height:460px;
+width:100%;
+    background-size:cover;
+    background-position:center;
+}
+.mdl-demo main > .mdl-layout__tab-panel{
+   padding:0;
+   }
+
+   .mdl-demo section.section--footer {
+   margin:0;}
+
+  #modal-1-content iframe{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  }
+  #modal-1-content {
+  padding-top:56.25%;
+  position:relative;
+  }
+
+  .about-card .section__text{
+    padding:10px 0;
+  }
+
+  .mdl-demo section .section__circle-container > .section__circle-container__circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
