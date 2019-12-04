@@ -47,6 +47,8 @@
     <!--
     <link rel="canonical" href="http://www.example.com/">
     -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
@@ -72,18 +74,20 @@
 
 
     </style>
+
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-    <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--waterfall mdl-layout__header--transparent">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--waterfall mdl-layout__header--transparent">
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-            <a href="/" class="mdl-layout__tab is-active">TEDxLviv 2020: Дух часу</a>
+            <a href="/" class="mdl-layout__tab ">TEDxLviv 2020: Дух часу</a>
             {% for event in events %}
 
-            <a href="{% url 'event'  event.name %}" class="mdl-layout__tab">{{ event.name }}</a>
+            <a href="{% url 'event'  event.name %}" class="mdl-layout__tab {% if main_event.name == event.name %} is-active {% endif %}">{{ event.name }}</a>
 
             {% endfor %}
             <!--  <a href="#features" class="mdl-layout__tab">Партнери</a> -->
@@ -91,105 +95,61 @@
         </div>
 
     </header>
+
     <main class="mdl-layout__content">
+       <div class="mdl-layout__tab-panel is-active" id="main_event{{ main_event.id }}">
 
-
-        <div class="mdl-layout__tab-panel is-active" id="overview">
-
-            <section class="section--center mdl-grid mdl-grid--no-spacing header_video">
-                <video autoplay loop muted>
-                    <source src="{% static 'videos/header.mp4' %}" type="video/mp4">
-
-                </video>
-            </section>
-
-            <section class="container mdl-grid ">
-
-                <div class="mdl-card mdl-cell mdl-shadow--2dp  mdl-cell--7-col about-container ">
-                    <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing about-card">
-                        <h4 class="mdl-cell mdl-cell--12-col">TED, TEDx і TEDxLviv - що це?</h4>
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--12-col-phone">
-                            <div class="section__circle-container__circle mdl-color--primary">TED</div>
-                        </div>
-                        <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Шо таке TED?</h5>
-                            TED – платформа ідей та унікальний формат, що об’єднує найбільшу у світі спільноту людей,
-                            які бажають змінювати світ на краще, обмінюючись досвідом і думками.
-
-                        </div>
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--12-col-phone">
-                            <div class="section__circle-container__circle mdl-color--primary">TEDx</div>
-                        </div>
-                        <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Що таке TEDx?</h5>
-                            Абревіатура “TED” розшифровується як «Технологія. Розваги. Дизайн.» – три широкі сфери, які,
-                            в сукупності визначають наше майбутнє.
-
-                        </div>
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--12-col-phone">
-                            <div class="section__circle-container__circle mdl-color--primary">TEDxLviv</div>
-                        </div>
-                        <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Що таке TEDxLviv?</h5>
-                            TEDxLviv – це перша ініціатива TEDx в Західній Україні. Наша місія – формування
-                            інтелектуальної спільноти, де люди постійно обмінюються ідеями, створюють нові рішення,
-                            впливають на формування майбутнього, покращують життя.
-
-                        </div>
-                    </div>
-
-                </div>
-  <iframe style="" class="facebook-frame mdl-shadow--2dp mdl-cell  mdl-cell--4-col"
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTEDxLviv%2F&tabs=timeline&width=320&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=999857826700956"
-                        width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowTransparency="true" allow="encrypted-media"></iframe>
-
+            <section class="section--center mdl-grid mdl-grid--no-spacing header_video" style="background-color:white;">
+                <div class="img" style="background-image:url(/media/{{ main_event.photo }});"></div>
             </section>
 
 
-            <!-- <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                 <div class="mdl-card mdl-cell mdl-cell--12-col">
-                     <div class="mdl-card__supporting-text">
-                         <h4>Що таке TEDx?</h4>
-                         Конференція TED славиться своїми лекціями (TED Talks), які охоплюють технології, розваги,
-                         дизайн, природничі науки, мистецтво, освіту, культуру, бізнес, глобальні проблеми та сталий
-                         розвиток — широкі сфери тем, що разом формують наше майбутнє.
+           <div class="container">
+                 <div class="row">
 
-                         TEDx - це локальна незалежна конференція, що збирає людей разом задля поширеня нових
-                         прогресивних думок, це світова спільнота, яка вірить в те, що ідеї можуть змінювати світ.
+                      {% for speaker in main_event.speakers.all %}
+
+                            <div class="col-md-4">
+                              <div class="card mb-4 shadow-sm  mdl-js-button mdl-js-ripple-effect section__play-btn"  --data-youtube="{{ speaker.video_link | youtube }}">
+                                <div class="bd-placeholder-img card-img-top speaker-preview"  style="background-image:url(/media/photos/{{ speaker.photo }});width:100%;padding-bottom:66%;background-position:center;background-size:cover;">
+
+                                </div>
+                                  <div style="position:relative;">
+                                       <div style="    width: 100%;
+    padding: 1.25rem;
+    position: absolute;
+    bottom: 100%;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 37%, rgba(0,0,0,0.75) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 37%,rgba(0,0,0,0.75) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 37%,rgba(0,0,0,0.75) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#bf000000',GradientType=0 );
+    color: white;"><b class="card-text">{{ speaker.name }} {{ speaker.surname }}</b>
+                                  <p class="card-text">{{ speaker.topic }}</p></div>
+                                <div class="card-body">
+
+                                  <p class="card-text">{{ speaker.description|truncatechars:200 }}</p>
+                                  <div class="d-flex justify-content-between align-items-center">
+
+                                    <small class="text-muted"></small>
+                                  </div>
+                                </div>
+                                  </div>
+
+                              </div>
+                            </div>
+
+            {% endfor %}
 
 
-                     </div>
-                     <div class="mdl-card__actions">
-                         <a href="https://www.ted.com/" class="mdl-button">Дізнатись більше на сайті TED</a>
-                     </div>
+
                  </div>
 
-             </section> -->
-            <section class="section--footer mdl-grid">
+           </div>
 
-                <script type="text/javascript">
-                    var widgetOptions = {bg_color: 'fcfcfc', id: 1852499, lang: 'uk', tickets_type: '117429_117430_117431_117432_117433_117434_117435'};
-                    (function() {
-                        var script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.async = true;
-                        script.src = "https://2event.com/js/widget-tickets.js";
-                        document.getElementsByTagName('head')[0].appendChild(script);
-                    })();
-                </script>
-                <div id="2event_tickets_widget" class="tickets_widget" style="width: 100%;"></div>
-
-            </section>
+            <section></section>
 
         </div>
-        <div class="mdl-layout__tab-panel" id="features">
-            <section class="section--center mdl-grid mdl-grid--no-spacing">
-                <div class="mdl-cell mdl-cell--12-col">
 
-                </div>
-            </section>
-        </div>
 
 
         <footer class="mdl-mega-footer">
@@ -275,7 +235,7 @@
 <script>
 
 MicroModal.init();
-$('.speaker-preview').click(function() {
+$('.section__play-btn').click(function() {
 video = this.getAttribute("--data-youtube")
         console.log(video)
 

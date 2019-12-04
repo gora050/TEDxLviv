@@ -5,9 +5,20 @@
     cursor:pointer;
     height:200px;
 }
-
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+button:focus {
+    outline: inherit
+}
 body,html, .mdl-layout {
 min-width:320px;
+
+}
+.mdl-demo .mdl-layout__tab-panel:not(#overview){
+
+background-color:#f5f5f5;
 }
 .mdl-demo .mdl-layout__content section.header_video {
     background-color: #010001;
@@ -55,8 +66,13 @@ width:100%;
    }
 
    .mdl-demo section.section--footer {
-   margin:0;}
+   margin:0;
+   padding:0;
+   }
 
+.section__play-btn {
+cursor:pointer;
+}
   #modal-1-content iframe{
   width:100%;
   height:100%;
@@ -71,6 +87,10 @@ width:100%;
 
   .about-card .section__text{
     padding:10px 0;
+  }
+  .tickets_widget {
+  padding:30px 0;
+  background-color:white;
   }
 
   .mdl-demo section .section__circle-container > .section__circle-container__circle {

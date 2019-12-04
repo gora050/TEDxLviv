@@ -24,5 +24,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", tedx.views.landing_page)
+    path("", tedx.views.landing_page),
+    path("events/<str:event_name>", tedx.views.event, name="event")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
