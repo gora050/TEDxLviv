@@ -28,7 +28,7 @@
     <section class="section--center mdl-grid mdl-grid--no-spacing header_video" style="background-color:white;">
         <div class="img" style="background-image:url(/media/{{ main_event.photo }});"></div>
         <div class="event-bg">
-            <div class="container ">
+            <div class="container">
                 <div class="row">
                 <div class="col"><h1 >{{ main_event.name }}: {{ main_event.title }}</h1>
             </div>
@@ -39,7 +39,7 @@
     </section>
 
 
-    <div class="container">
+    <div class="container main_event_container">
         <div class="row">
 
             {% for speaker in main_event.speakers.all %}
@@ -82,7 +82,24 @@
 
     </div>
 
-    <section></section>
+    <section class="event-partners bg-white">
+        <div class="container">
+
+        {% for partnergroup in main_event.partnergroups.all %}
+        <div class="row event_partners_group">
+
+                 <div class="col-12"><h1>{{ partnergroup.name }} </h1></div>
+
+                {% for partner in partnergroup.partners.all %}
+                    <div class="col-{{ partnergroup.size_1 }} col-sm-{{partnergroup.size_2}}  col-lg-{{partnergroup.size_3}} event_partner">
+                        <a href="{{ partner.link }}"><img class="event_partner-image" src="/media/photos/{{ partner.photo }}" alt="{{ partner.name }}"></a>
+                    </div>
+                {% endfor %}
+
+            </div>
+        {% endfor %}
+        </div>
+    </section>
 
 </div>
 

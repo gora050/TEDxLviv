@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'event',
     'schedule',
     'tedx',
+    'partner_group',
+    'partner',
 ]
 
 MIDDLEWARE = [
